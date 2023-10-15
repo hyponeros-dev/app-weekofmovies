@@ -1,0 +1,115 @@
+/*-------------------------------*\
+  #FONTS
+\*-------------------------------*/
+
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/inter-v13-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/inter-v13-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/*-------------------------------*\
+  #CONTAINER
+\*-------------------------------*/
+
+.container {
+  width: min(100%, clamp(37.5rem, 10.493rem + 72.019vw, 114.2rem));
+  margin-inline: auto;
+  padding-inline: 1.6rem;
+}
+
+body {
+  font-family: inter, serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+main {
+  padding-block-end: 15rem;
+}
+
+:is(h1, h2) {
+  text-transform: uppercase;
+}
+h1 {
+  padding-block: 5rem;
+  font-size: 3.2rem;
+}
+h2 {
+  padding-block: 3rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.center {
+  display: grid;
+  justify-content: center;
+}
+
+:is(.calendar-form, .field) {
+  display: grid;
+  place-items: start;
+}
+.calendar-form {
+  gap: 1.6rem;
+}
+.field {
+  gap: 0.8rem;
+}
+.field label {
+  font-weight: 700;
+}
+form select {
+  width: 100%;
+  font-size: 2rem;
+  padding: 0.6rem;
+}
+input[type='text'],
+input[type='number'] {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #538fcd;
+  color: white;
+}
+::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-inline: auto;
+  width: 100%;
+  padding: 1.2rem 3.2rem;
+  background-color: #538fcd;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  border-radius: 0.8rem;
+}
+.btn-primary:is(:hover, :focus) {
+  outline: 2px solid #538fcd;
+  color: #538fcd;
+  background-color: #fff;
+  font-weight: 700;
+}

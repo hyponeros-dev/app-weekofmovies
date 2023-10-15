@@ -12,11 +12,46 @@
 </head>
 
 <body>
-    <h1>Mon calendrier</h1>
-    <div id="myCalendar" class="vanilla-calendar">
 
-    </div>
-
+    <main>
+        <div class="container">
+            <h1>Semaine de films</h1>
+            <div id="myCalendar" class="vanilla-calendar">
+            </div>
+            <div class="center">
+                <h2>Ajout de film</h2>
+                <form class="calendar-form">
+                    <div class="field">
+                        <label for="title">Titre du film</label>
+                        <input type="text" name="title" id="title" placeholder="Titre du film" Titre du film>
+                    </div>
+                    <div class="field">
+                        <label for="year">Année du film</label>
+                        <input type="number" name="year" min="1900" id="year" value="2010">
+                    </div>
+                    <div class="field">
+                        <label for="duration">Durée (ex : 2h15)</label>
+                        <input type="text" name="duration" id="duration" placeholder="Durée du film">
+                    </div>
+                    <div class="field">
+                        <label for="genre">Genre</label>
+                        <select name="genre" id="genre" multiple size="9">
+                            <option value="action">Action</option>
+                            <option value="comedie">Comédie</option>
+                            <option value="drame">Drame</option>
+                            <option value="fantastique">Fantastique</option>
+                            <option value="horreur">Horreur</option>
+                            <option value="policier">Policier</option>
+                            <option value="romance">Romance</option>
+                            <option value="science-fiction">Science-Fiction</option>
+                            <option value="thriller">Thriller</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary" type="submit">Ajouter le film</button>
+                </form>
+            </div>
+        </div>
+    </main>
 
 
     <script src="libs/calendar/vanilla-calendar-min.js"></script>

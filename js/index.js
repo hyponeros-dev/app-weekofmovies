@@ -2,7 +2,10 @@
 const calendar = new VanillaCalendar({
   selector: '#myCalendar',
   onSelect: (data, elem) => {
-    console.log(data);
+    // selectedDate = data;
+    // alert(`Vous avez sélectionné le ${new Date(selectedDate.date).toISOString().split('T')[0]}`);
+    selectedDate = new Date(data.date).toISOString().split('T')[0];
+    alert(`Vous avez sélectionné le ${selectedDate}`);
   },
   months: [
     'Janvier',
@@ -21,3 +24,5 @@ const calendar = new VanillaCalendar({
   shortWeekday: ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'],
   pastDates: false,
 });
+
+let selectedDate = {};
